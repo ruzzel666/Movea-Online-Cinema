@@ -1,4 +1,4 @@
-/* reset css */
+﻿/* reset css */
 *,
 *::before,
 *::after {
@@ -168,22 +168,40 @@ input {
     padding: 1.9rem 0 1.9rem 1.9rem;
 }
 
+.main-display__trailer:after,
+.trending__item:after,
+.popular__item:after,
+.aside__item:after {
+    content: '';
+    position: absolute;
+    display: block;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 1.6rem;
+    z-index: 0;
+}
+
 .main-display__views {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 119%;
+    z-index: 10;
 }
 
 .main-display__header {
+    position: relative;
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 150%;
+    z-index: 10;
 }
 
 .main-display__date {
+    position: relative;
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 114%;
+    z-index: 10;
 }
 
 .button-play__wrap {
@@ -199,6 +217,7 @@ input {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 10;
 }
 
 .button-play {
@@ -285,6 +304,7 @@ input {
 .popular__footer {
     background: rgba(255, 255, 255, 0.4);
     padding: .8rem 1.9rem .8rem 6.4rem;
+    z-index: 10;
 }
 
 .popular__footer-left {
@@ -293,15 +313,19 @@ input {
 }
 
 .trending__header {
+    position: relative;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 150%;
+    z-index: 10;
 }
 
 .trending__date {
+    position: relative;
     font-weight: 700;
     font-size: 1rem;
     line-height: 120%;
+    z-index: 10;
 }
 
 .trending__time {
@@ -311,6 +335,7 @@ input {
     font-size: 1.4rem;
     line-height: 114%;
     color: #000000;
+    z-index: 10;
 }
 
 .trending__plash {
@@ -322,6 +347,7 @@ input {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 1.6rem;
     padding: .4rem 1.3rem;
+    z-index: 10;
 }
 
 .small {
@@ -343,6 +369,7 @@ input {
     border-left: 1.5rem solid #FFFFFF;
     border-bottom: 1rem solid rgba(255, 255, 255, 0.07);
     border-radius: .2rem;
+    z-index: 10;
 }
 
 .button-play__wrap.small-plus .button-play {
@@ -352,6 +379,7 @@ input {
     border-left: 1rem solid #FFFFFF;
     border-bottom: .5rem solid rgba(255, 255, 255, 0.07);
     border-radius: .2rem;
+    z-index: 10;
 }
 
 .popular__item {
@@ -371,17 +399,20 @@ input {
     font-weight: 700;
     font-size: 1rem;
     line-height: 120%;
+    z-index: 10;
 }
 
 .popular__date {
     font-weight: 700;
     font-size: .8rem;
     line-height: 113%;
+    z-index: 10;
 }
 
 .popular__rating {
     display: flex;
     align-items: center;
+    z-index: 10;
 }
 
 .popular__rating span {
@@ -389,9 +420,174 @@ input {
     font-size: 1rem;
     line-height: 120%;
     margin-left: .4rem;
+    z-index: 10;
 }
 
-/*сетка*/
+.aside {
+    padding-right: 5.9rem;
+}
+
+.aside__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.6rem;
+}
+
+.aside__sort {
+    display: flex;
+}
+
+.aside__sort-img {
+    display: flex;
+    flex-direction: column;
+    margin-left: .4rem;
+}
+
+.aside__sort-img img {
+    width: .7rem;
+    height: .7rem;
+    cursor: pointer;
+}
+
+.aside__sort-img img:nth-child(1) {
+    margin-bottom: .3rem;
+}
+
+.aside__header {
+    font-size: 2rem;
+    line-height: 115%;
+}
+
+.aside__sort-text {
+    margin-right: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: rgba(255, 255, 255, .4);
+}
+
+.aside__sort-select {
+    display: flex;
+    align-items: center;
+}
+
+
+.aside__sort-select span {
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+
+.aside__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 22.6rem;
+    border-radius: 1.5rem;
+    padding: 1.9rem 0 1.9rem 1.9rem;
+    background: url('../img/aside-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.aside__item:nth-child(3) {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.aside__views {
+    position: relative;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 119%;
+    z-index: 10;
+}
+
+.aside__footer {
+    position: relative;
+    z-index: 10;
+}
+
+.aside__item-name {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 117%;
+}
+
+.aside__item-date {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+
+.aside__bottom {
+    padding: 2.5rem 0 2rem 0;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.aside__favourite-text {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    line-height: 115%;
+}
+
+.aside__genre-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding-right: 5rem;
+}
+
+.aside__genre {
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+    padding: .5rem 1rem;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    line-height: 117%;
+}
+
+.perple {
+    background: #8066F6
+}
+
+.orange {
+    background: #E1784F;
+}
+
+.green {
+    background: #63CFE1;
+}
+
+.gray {
+    background: #2B2A2F;
+}
+
+.aside__favourite {
+    margin-bottom: 6rem;
+}
+
+.aside__add {
+    display: flex;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    line-height: 114%;
+    cursor: pointer;
+}
+
+.aside__add-round {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2B2A2F;
+    margin-right: .5rem;
+}
+
+/*СЃРµС‚РєР°*/
 @media (max-width: 108em) {
     html {
         font-size: 9px;
@@ -482,4 +678,4 @@ input {
     }
 }
 
-/*сетка*/
+/*СЃРµС‚РєР°*/
